@@ -1,6 +1,6 @@
 # Demo Flavor
 
-Flavor demonstrating the capabilities of XWiki, featuring several Extensions installed by default.
+Flavor demonstrating the capabilities of XWiki, featuring several recommended Extensions installed by default.
 
 
 * Project Lead: [Vincent Massol](http://www.xwiki.org/xwiki/bin/view/XWiki/VincentMassol)

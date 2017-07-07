@@ -33,7 +33,9 @@
   <packaging>xar</packaging>
   <description>Flavor demonstrating XWiki and featuring several recommended Extensions installed by default</description>
   <properties>
-    <platform.version>9.5.1</platform.version>
+    <commons.version>9.5.1</commons.version>
+    <rendering.version>${commons.version}</rendering.version>
+    <platform.version>${commons.version}</platform.version>
     <xwiki.extension.category>flavor</xwiki.extension.category>
     <!-- This flavor is only for the main wiki -->
     <xwiki.extension.namespaces>wiki:xwiki</xwiki.extension.namespaces>
@@ -51,6 +53,159 @@
       <name>Vincent Massol</name>
     </developer>
   </developers>
+  <!-- Some extensions declared below could depend transitively on old XWiki artifacts that are not installed in the
+       XWiki instance where this flavor is installed and that would get installed in versions that are too old for
+       other extensions below to work properly. -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- Needed for application-help-center -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-icon-script</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-skin-skinx</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-administration-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-rendering-wikimacro-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-extension-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.rendering</groupId>
+        <artifactId>xwiki-rendering-macro-toc</artifactId>
+        <version>${rendering.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-rendering-macro-gallery</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-chart-macro</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-index-tree-macro</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-index-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-help-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <!-- Needed for application-blog-ui -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-eventstream</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-notifications-api</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for application-faq-ui -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-localization-source-wiki</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for application-filemanager-ui -->
+      <dependency>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-job</artifactId>
+        <version>${commons.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-sheet-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-jodatime</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-rendering-macro-code</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-office-macro</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for application-meeting-ui -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-mail-send-default</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-rendering-macro-script</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for application-forum-ui -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-ratings-ui</artifactId>
+        <version>${platform.version}</version>
+        <type>xar</type>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-display-macro</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for application-mocca-calendar-ui -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-rendering-macro-groovy</artifactId>
+        <version>${platform.version}</version>
+      </dependency>
+      <!-- Needed for syntax-markdown-markdown12 -->
+      <dependency>
+        <groupId>org.xwiki.rendering</groupId>
+        <artifactId>xwiki-rendering-api</artifactId>
+        <version>${rendering.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.rendering</groupId>
+        <artifactId>xwiki-rendering-syntax-plain</artifactId>
+        <version>${rendering.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <!-- Build on top of the Standard Flavor -->
     <dependency>
@@ -165,6 +320,19 @@
       <version>3.4</version>
       <type>xar</type>
       <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-webjars</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- Needed for editor-tool-highlighting-ui because it's depending on some old version of xwiki-platform-webjars
+         which has now been moved into xwiki-platform-webjar-api -->
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-webjars-api</artifactId>
+      <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>org.xwiki.contrib.markdown</groupId>

@@ -32,6 +32,7 @@
   <name>Demo Flavor</name>
   <packaging>xar</packaging>
   <description>Flavor demonstrating XWiki and featuring several recommended Extensions installed by default</description>
+  <url>http://extensions.xwiki.org/xwiki/bin/view/Extension/Demo Flavor/</url>
   <properties>
     <commons.version>9.5.1</commons.version>
     <rendering.version>${commons.version}</rendering.version>

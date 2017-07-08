@@ -44,7 +44,7 @@
   </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/flavor-demo.git</connection>
-    <developerConnection>scm:git:git@github.com:xwiki-contrib/demo-flavor.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/flavor-demo.git</developerConnection>
     <url>https://github.com/xwiki-contrib/flavor-demo/tree/master</url>
     <tag>flavor-demo-1.0</tag>
   </scm>

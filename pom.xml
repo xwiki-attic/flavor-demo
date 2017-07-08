@@ -28,7 +28,7 @@
     <version>8.4-8</version>
   </parent>
   <artifactId>flavor-demo</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Demo Flavor</name>
   <packaging>xar</packaging>
   <description>Flavor demonstrating XWiki and featuring several recommended Extensions installed by default</description>
@@ -46,7 +46,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/flavor-demo.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/flavor-demo.git</developerConnection>
     <url>https://github.com/xwiki-contrib/flavor-demo/tree/master</url>
-    <tag>HEAD</tag>
+    <tag>flavor-demo-1.0</tag>
   </scm>
   <developers>
     <developer>

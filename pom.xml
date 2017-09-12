@@ -241,7 +241,7 @@
     <dependency>
       <groupId>org.xwiki.contrib.blog</groupId>
       <artifactId>application-blog-ui</artifactId>
-      <version>9.4</version>
+      <version>9.5</version>
       <type>xar</type>
       <scope>runtime</scope>
     </dependency>

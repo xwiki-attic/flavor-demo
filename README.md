@@ -1,3 +1,5 @@
+Moved to xwiki-attic on 6th of October 2022, see https://forum.xwiki.org/t/remove-the-demo-flavor/10198
+
 # Demo Flavor
 
 Flavor demonstrating the capabilities of XWiki, featuring several recommended Extensions installed by default.
